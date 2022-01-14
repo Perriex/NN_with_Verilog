@@ -11,7 +11,7 @@ module Multi( x, w, mo);
     genvar i;
     generate;
         for( i = 0; i < 8; i = i + 1 )begin
-            Mulitplier mx( x[i], w[i], mo[i]);
+            Mulitplier #(size) mx( x[i], w[i], mo[i]);
         end
     endgenerate
 
