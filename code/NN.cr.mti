@@ -1,0 +1,15 @@
+{D:/UT/Term 5/CAD/HW/4/project/code/Adder.v} {1 {vlog -work work -stats=none {D:/UT/Term 5/CAD/HW/4/project/code/Adder.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Adder
+
+Top level modules:
+	Adder
+
+} {} {}} {D:/UT/Term 5/CAD/HW/4/project/code/ActivationFunc.v} {1 {vlog -work work -stats=none {D:/UT/Term 5/CAD/HW/4/project/code/ActivationFunc.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ActivationFunc
+
+Top level modules:
+	ActivationFunc
+
+} {} {}}
