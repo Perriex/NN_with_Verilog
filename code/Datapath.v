@@ -1,20 +1,23 @@
 `timescale 1ns/1ns
 
-module Datapath();
+module Datapath(clk, layerrst, done);
+    parameter size = 8;
+    input clk, layerrst;
+    output done;
 
-    parameter size = 16;
+    wire [511:0] weight;
+    wire [63:0] bias;
+    wire [63:0] puout, puin;
+    reg  [63:0] in = 1;
+    wire isfirst;
 
-    reg [size-1:0] bias [7:0];
+    Layer #(size, 1, 1, 1) layer1(clk, we, layerrst, 0, weight, bias, 0, puout, puin, done, isfirst);
 
-    reg [size-1:0] out [7:0];
-
-    // PU pu0 ( x0, w0, bias[0], out[0]);
-    // PU pu1 ( x1, w1, bias[1], out[1]);
-    // PU pu2 ( x2, w2, bias[2], out[2]);
-    // PU pu3 ( x3, w3, bias[3], out[3]);
-    // PU pu4 ( x4, w4, bias[4], out[4]);
-    // PU pu5 ( x5, w5, bias[5], out[5]);
-    // PU pu6 ( x6, w6, bias[6], out[6]);
-    // PU pu7 ( x7, w7, bias[7], out[7]);
+    genvar k;
+    generate 
+        for(k = 0; k < 8; k = k + 1) begin
+            PU pu0(clk, isfirst, in, weight[((k+1)<<6)-1:k<<6], bias[((k+1)<<3)-1:k<<3], puout[((k+1)<<3)-1:k<<3]);
+        end
+    endgenerate
 
 endmodule
