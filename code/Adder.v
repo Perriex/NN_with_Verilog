@@ -6,7 +6,7 @@ module Adder(
    );
     parameter size = 16;
     input [size-1:0] a, b;
-    output [size-1:0] out;
+    output reg[size-1:0] out;
 
 	reg [size-1:0] mag_a, mag_b, max, min;
 	reg sign_a, sign_b, sign;
