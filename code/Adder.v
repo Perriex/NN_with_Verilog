@@ -30,7 +30,7 @@ module Adder(
 		out[size-2:0] = max + min; 
 		end
 	  else begin 
-		sum[size-2:0] = max - min; 
+		out[size-2:0] = max - min; 
 		end
 	  out[size-1:0] = {sign, out[size-2:0]};
 	end
