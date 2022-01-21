@@ -1,0 +1,5 @@
+b1_sm.dat 30 1
+b2_sm.dat 10 1
+w1_sm.dat 62 8
+w2_sm.dat 30 8
+te_data_sm.dat 62 750

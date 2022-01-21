@@ -9,8 +9,9 @@ module PU(clk, isfirst, x, w, bias, out);
 
 
     wire [14:0] mo [7:0];
-    wire [24:0] ao [7:0];
-    reg [7:0] acc;
+    wire [20:0] ao [7:0];
+    wire [7:0] saturated;
+    reg [20:0] acc;
     output [7:0] out;
 
     genvar k;
@@ -24,26 +25,28 @@ module PU(clk, isfirst, x, w, bias, out);
 
     generate
         for(k=0; k < 4; k = k + 1)
-            Adder #(25) add1( {mo[k][14], 10'b0, mo[k][13:0]}, {mo[k+1][14], 10'b0, mo[k+1][13:0]}, ao[k]);
+            Adder #(21) add1( {mo[k][14], 10'b0, mo[k][13:0]}, {mo[k+1][14], 10'b0, mo[k+1][13:0]}, ao[k]);
     endgenerate
 
-    Adder #(25) add5( ao[0], ao[1], ao[4]);
-    Adder #(25) add6( ao[2], ao[3], ao[5]);
+    Adder #(21) add5( ao[0], ao[1], ao[4]);
+    Adder #(21) add6( ao[2], ao[3], ao[5]);
 
-    Adder #(25) add7( ao[4], ao[5], ao[6]);
+    Adder #(21) add7( ao[4], ao[5], ao[6]);
 
-    wire [7:0] lastaddin;
-    wire [7:0] muxin[1:0];
+    wire [20:0] lastaddin;
+    wire[14:0] biasout;
+    wire [20:0] muxin[1:0];
     assign muxin[0] = acc;
-    assign muxin[1] = bias;
+    assign muxin[1] = {biasout[14], 10'b0, biasout[13:0]};
+    Mulitplier #(8) mm(8'b01111111, bias, biasout);
+    Mux #(1,21) mux(muxin, isfirst, lastaddin);
+    Adder #(21) add8( ao[6], lastaddin, ao[7]);
 
-    Mux #(2,8) mux(muxin, isfirst, lastaddin);
-    Adder #(25) add8( ao[6], {lastaddin[7], 17'b0, lastaddin[6:0]}, ao[7]);
-
-    assign out = ao[7][24:17];
-    //ActivationFunc relu( ao[7], out);
+    //assign saturated = |ao[7][19:17] ? {ao[7][20], 7'b1111111} : {ao[7][20], ao[7][16:10]};
+    assign saturated = {ao[7][20], ao[7][13:7]};
+    ActivationFunc relu( saturated, out);
 
     always @(posedge clk) begin
-        acc <= ao[7][24:17];
+        acc <= ao[7];
     end
 endmodule

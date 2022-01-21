@@ -1,15 +1,83 @@
-{D:/UT/Term 5/CAD/HW/4/project/code/Adder.v} {1 {vlog -work work -stats=none {D:/UT/Term 5/CAD/HW/4/project/code/Adder.v}
+E:/Uni/CAD/NN_with_Verilog/code/ActivationFunc.v {1 {vlog -work work -stats=none E:/Uni/CAD/NN_with_Verilog/code/ActivationFunc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ActivationFunc
+
+Top level modules:
+	ActivationFunc
+
+} {} {}} E:/Uni/CAD/NN_with_Verilog/code/Multiplier.v {1 {vlog -work work -stats=none E:/Uni/CAD/NN_with_Verilog/code/TPU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mulitplier
+
+Top level modules:
+	Mulitplier
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TPU
+
+Top level modules:
+	TPU
+
+} {} {}} E:/Uni/CAD/NN_with_Verilog/code/Adder.v {1 {vlog -work work -stats=none E:/Uni/CAD/NN_with_Verilog/code/Adder.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Adder
 
 Top level modules:
 	Adder
 
-} {} {}} {D:/UT/Term 5/CAD/HW/4/project/code/ActivationFunc.v} {1 {vlog -work work -stats=none {D:/UT/Term 5/CAD/HW/4/project/code/ActivationFunc.v}
+} {} {}} E:/Uni/CAD/NN_with_Verilog/code/TPU.v {1 {vlog -work work -stats=none E:/Uni/CAD/NN_with_Verilog/code/TPU.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ActivationFunc
+-- Compiling module TPU
 
 Top level modules:
-	ActivationFunc
+	TPU
+
+} {} {}} E:/Uni/CAD/NN_with_Verilog/code/Controller.v {1 {vlog -work work -stats=none E:/Uni/CAD/NN_with_Verilog/code/Controller.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Controller
+
+Top level modules:
+	Controller
+
+} {} {}} E:/Uni/CAD/NN_with_Verilog/code/Layer.v {1 {vlog -work work -stats=none E:/Uni/CAD/NN_with_Verilog/code/Layer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Layer
+
+Top level modules:
+	Layer
+
+} {} {}} E:/Uni/CAD/NN_with_Verilog/code/TB.v {1 {vlog -work work -stats=none E:/Uni/CAD/NN_with_Verilog/code/TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB
+
+Top level modules:
+	TB
+
+} {} {}} E:/Uni/CAD/NN_with_Verilog/code/Datapath.v {1 {vlog -work work -stats=none E:/Uni/CAD/NN_with_Verilog/code/Datapath.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Datapath
+
+Top level modules:
+	Datapath
+
+} {} {}} E:/Uni/CAD/NN_with_Verilog/code/SinglePortMemory.v {1 {vlog -work work -stats=none E:/Uni/CAD/NN_with_Verilog/code/SinglePortMemory.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SinglePortMemory
+
+Top level modules:
+	SinglePortMemory
+
+} {} {}} E:/Uni/CAD/NN_with_Verilog/code/LayerController.v {1 {vlog -work work -stats=none E:/Uni/CAD/NN_with_Verilog/code/LayerController.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module LayerController
+
+Top level modules:
+	LayerController
+
+} {} {}} E:/Uni/CAD/NN_with_Verilog/code/Mux.v {1 {vlog -work work -stats=none E:/Uni/CAD/NN_with_Verilog/code/Mux.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mux
+
+Top level modules:
+	Mux
 
 } {} {}}

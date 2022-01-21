@@ -1,11 +1,11 @@
-module Layer (clk, we, rst, weightwrite, weight, bias, biaswrite, in, out, done, isfirst);
+module Layer (clk, we, en, rst, weightwrite, weight, bias, biaswrite, in, out, done, isfirst);
 
 parameter wordsize = 8;
 parameter addrsize;
 parameter inputsize;
 parameter neuroncount;
 
-input clk, we, rst;
+input clk, we, en, rst;
 output done, isfirst;
 input [511:0] weightwrite;
 input [63:0] in, biaswrite;
@@ -13,8 +13,9 @@ output [511:0] weight;
 output [63:0] bias;
 output [63:0] out;
 reg [addrsize-1:0] addr;
+reg [neuroncount-1:0] outindex;
 reg [addrsize-1:0] inputcounter;
-reg [63:0] results[addrsize-1:0];
+reg [63:0] results[neuroncount-1:0];
 wire islast;
 
 genvar k;
@@ -24,29 +25,51 @@ generate
     end
 endgenerate
 
-SinglePortMemory #(wordsize, addrsize) MM(clk, we, addr, biaswrite, bias);
+SinglePortMemory #(wordsize<<3, addrsize) MM(clk, we, inputcounter, biaswrite, bias);
+
+always @(posedge en) begin
+    addr <= 0;
+    inputcounter <= 0;
+    outindex <= 0;
+end
 
 always @(posedge clk) begin
     if(rst)
         addr <= 0;
-    else
-        addr <= addr+1;
+    else if(en)
+        addr <= addr + 1;
+end
+
+always @(posedge clk) begin
+    if(rst)
+        outindex <= 0;
+    else if(en && inputcounter == inputsize - 1) begin
+        if(outindex == neuroncount - 1)
+            outindex <=  0;
+        else 
+            outindex <= outindex + 1;
+    end
+    if(~en) begin
+        if(outindex == neuroncount - 1)
+            outindex <=  0;
+        else 
+            outindex <= outindex + 1;
+    end
 end
 
 always @(posedge clk) begin
     if(rst)
         inputcounter <= 0;
-    else if(inputcounter == inputsize) begin
+    else if(inputcounter == inputsize - 1 && en) begin
+        results[outindex] <= in;
         inputcounter <= 0;
-        if(we)
-            results[addr] <= in;
     end
-    else
-        inputcounter <= inputsize+1;
+    else if(en)
+        inputcounter <= inputcounter+1;
 end
 
-assign done = addr == neuroncount*inputsize;
+assign done = addr == neuroncount*inputsize - 1;
 assign isfirst = inputcounter == 0;
-assign out = results[addr];
+assign out = results[outindex];
     
 endmodule

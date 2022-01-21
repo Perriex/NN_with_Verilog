@@ -1,0 +1,299 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/intelFPGA/20.1
+vActivationFunc
+Z0 !s110 1642791433
+!i10b 1
+!s100 34CadjzTW6G=@5aKoDS<93
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IBG[?3E3;<^=`Z>DjWNFk`2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dE:/Uni/CAD/NN_with_Verilog/code
+w1642779226
+8E:/Uni/CAD/NN_with_Verilog/code/ActivationFunc.v
+FE:/Uni/CAD/NN_with_Verilog/code/ActivationFunc.v
+!i122 46
+L0 3 10
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1642791433.000000
+!s107 E:/Uni/CAD/NN_with_Verilog/code/ActivationFunc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Uni/CAD/NN_with_Verilog/code/ActivationFunc.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@activation@func
+vAdder
+R0
+!i10b 1
+!s100 iaj3a`YJ_igA[M]8]keZX0
+R1
+IagQ5MGf:O[V5Pdb0kN5ag0
+R2
+R3
+w1642616705
+8E:/Uni/CAD/NN_with_Verilog/code/Adder.v
+FE:/Uni/CAD/NN_with_Verilog/code/Adder.v
+!i122 47
+L0 3 35
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/Uni/CAD/NN_with_Verilog/code/Adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Uni/CAD/NN_with_Verilog/code/Adder.v|
+!i113 1
+R6
+R7
+n@adder
+vController
+R0
+!i10b 1
+!s100 D2?za_V3nXAY8ac19]R8>3
+R1
+I7i2TdXlz01WN62bj635:@3
+R2
+R3
+w1642179431
+8E:/Uni/CAD/NN_with_Verilog/code/Controller.v
+FE:/Uni/CAD/NN_with_Verilog/code/Controller.v
+!i122 48
+L0 3 5
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/Uni/CAD/NN_with_Verilog/code/Controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Uni/CAD/NN_with_Verilog/code/Controller.v|
+!i113 1
+R6
+R7
+n@controller
+vDatapath
+Z8 !s110 1642791434
+!i10b 1
+!s100 QQ7ge?6VooU9K=S7?W;5U1
+R1
+IVU4CYYkP8ZMz9@eVbEc^S0
+R2
+R3
+w1642617929
+8E:/Uni/CAD/NN_with_Verilog/code/Datapath.v
+FE:/Uni/CAD/NN_with_Verilog/code/Datapath.v
+!i122 49
+L0 3 38
+R4
+r1
+!s85 0
+31
+Z9 !s108 1642791434.000000
+!s107 E:/Uni/CAD/NN_with_Verilog/code/Datapath.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Uni/CAD/NN_with_Verilog/code/Datapath.v|
+!i113 1
+R6
+R7
+n@datapath
+vLayer
+R8
+!i10b 1
+!s100 6WcQZI58N?YCc@d]8aN[K0
+R1
+IENhXX[RATfYla6`zfaDKY2
+R2
+R3
+w1642778938
+8E:/Uni/CAD/NN_with_Verilog/code/Layer.v
+FE:/Uni/CAD/NN_with_Verilog/code/Layer.v
+!i122 50
+L0 1 75
+R4
+r1
+!s85 0
+31
+R9
+!s107 E:/Uni/CAD/NN_with_Verilog/code/Layer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Uni/CAD/NN_with_Verilog/code/Layer.v|
+!i113 1
+R6
+R7
+n@layer
+vLayerController
+R8
+!i10b 1
+!s100 i@>f7D[M`N@<PIPHGk@0F0
+R1
+Indbj[2HNj5IzLINQ1gLC=2
+R2
+R3
+w1642618574
+8E:/Uni/CAD/NN_with_Verilog/code/LayerController.v
+FE:/Uni/CAD/NN_with_Verilog/code/LayerController.v
+!i122 51
+L0 1 44
+R4
+r1
+!s85 0
+31
+R9
+!s107 E:/Uni/CAD/NN_with_Verilog/code/LayerController.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Uni/CAD/NN_with_Verilog/code/LayerController.v|
+!i113 1
+R6
+R7
+n@layer@controller
+vMulitplier
+R8
+!i10b 1
+!s100 XOUlQ5ChG8;I9Fe8g795I0
+R1
+I^]j5S4[An]j<BRYGmG`NL1
+R2
+R3
+w1642783997
+8E:/Uni/CAD/NN_with_Verilog/code/Multiplier.v
+FE:/Uni/CAD/NN_with_Verilog/code/Multiplier.v
+!i122 52
+L0 3 9
+R4
+r1
+!s85 0
+31
+R9
+!s107 E:/Uni/CAD/NN_with_Verilog/code/Multiplier.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Uni/CAD/NN_with_Verilog/code/Multiplier.v|
+!i113 1
+R6
+R7
+n@mulitplier
+vMux
+R8
+!i10b 1
+!s100 8cQ8N;k>ZYKch<N`XROjN1
+R1
+Ij;bVmnzR0I2L9:c[:;PVJ2
+R2
+R3
+w1642613197
+8E:/Uni/CAD/NN_with_Verilog/code/Mux.v
+FE:/Uni/CAD/NN_with_Verilog/code/Mux.v
+!i122 54
+L0 1 9
+R4
+r1
+!s85 0
+31
+R9
+!s107 E:/Uni/CAD/NN_with_Verilog/code/Mux.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Uni/CAD/NN_with_Verilog/code/Mux.v|
+!i113 1
+R6
+R7
+n@mux
+vPU
+!s110 1642791620
+!i10b 1
+!s100 hEV`^77V4d[bHgYWnN9c41
+R1
+I3YCY]7U>]Wd]GUP[AW`N60
+R2
+R3
+w1642791617
+8E:/Uni/CAD/NN_with_Verilog/code/PU.v
+FE:/Uni/CAD/NN_with_Verilog/code/PU.v
+!i122 60
+L0 3 50
+R4
+r1
+!s85 0
+31
+!s108 1642791620.000000
+!s107 E:/Uni/CAD/NN_with_Verilog/code/PU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Uni/CAD/NN_with_Verilog/code/PU.v|
+!i113 1
+R6
+R7
+n@p@u
+vSinglePortMemory
+R8
+!i10b 1
+!s100 lzJjU;eoTlOJmGQ^jYAXE1
+R1
+IY8:nMko_WKZBESREAlcFP0
+R2
+R3
+w1642431165
+8E:/Uni/CAD/NN_with_Verilog/code/SinglePortMemory.v
+FE:/Uni/CAD/NN_with_Verilog/code/SinglePortMemory.v
+!i122 56
+L0 1 18
+R4
+r1
+!s85 0
+31
+R9
+!s107 E:/Uni/CAD/NN_with_Verilog/code/SinglePortMemory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Uni/CAD/NN_with_Verilog/code/SinglePortMemory.v|
+!i113 1
+R6
+R7
+n@single@port@memory
+vTB
+R8
+!i10b 1
+!s100 K1`5XBIiG8Uj`oZ@V]@bA3
+R1
+IUUA<6=DSPW4QoB[PSKG<O3
+R2
+R3
+w1642791104
+8E:/Uni/CAD/NN_with_Verilog/code/TB.v
+FE:/Uni/CAD/NN_with_Verilog/code/TB.v
+!i122 57
+L0 2 70
+R4
+r1
+!s85 0
+31
+R9
+!s107 E:/Uni/CAD/NN_with_Verilog/code/TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Uni/CAD/NN_with_Verilog/code/TB.v|
+!i113 1
+R6
+R7
+n@t@b
+vTPU
+R8
+!i10b 1
+!s100 la0cCnUibkWm=6oE5FhgY2
+R1
+IZ]LndbGYVd;mSIOkR<F8z3
+R2
+R3
+w1642791427
+8E:/Uni/CAD/NN_with_Verilog/code/TPU.v
+FE:/Uni/CAD/NN_with_Verilog/code/TPU.v
+!i122 58
+L0 1 10
+R4
+r1
+!s85 0
+31
+R9
+!s107 E:/Uni/CAD/NN_with_Verilog/code/TPU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Uni/CAD/NN_with_Verilog/code/TPU.v|
+!i113 1
+R6
+R7
+n@t@p@u
