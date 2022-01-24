@@ -43,7 +43,7 @@ module PU(clk, isfirst, x, w, bias, out);
     Adder #(21) add8( ao[6], lastaddin, ao[7]);
 
     //assign saturated = |ao[7][19:17] ? {ao[7][20], 7'b1111111} : {ao[7][20], ao[7][16:10]};
-    assign saturated = {ao[7][20], ao[7][13:7]};
+    assign saturated = {ao[7][20], ao[7][19:12]};
     ActivationFunc relu( saturated, out);
 
     always @(posedge clk) begin
